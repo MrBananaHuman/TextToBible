@@ -25,6 +25,7 @@ for i in range(0, len(pre_data_lines)):
  pre_key = ' '.join(pre_data_line.split(' ')[0:1])
  post_data_line = post_data_lines[i].replace('\n', '')
  post_sent = ' '.join(post_data_line.split(' ')[2:])
+ maches = re.findall(p, post_sent)
  for mach in maches:
   post_sent = post_sent.replace(mach, '')
  maches = re.findall(p2, post_sent)
